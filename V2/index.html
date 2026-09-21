@@ -108,9 +108,9 @@ nav .right .btn{height:46px;padding:0 24px}
 /* pov */
 .pov{background:var(--bg2)}
 .pov .better{font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.02em;color:#9C8FFF;margin-top:28px;line-height:1.1}
-.pov .stmt em{font-style:italic;font-variation-settings:"wdth" 125,"wght" 900}
-.pov .stmt{font-variation-settings:"wdth" 125,"wght" 700}
-.pov .stmt{font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;font-size:18px;letter-spacing:-.01em;line-height:1.4;margin:40px 0 0;max-width:none}
+.pov .stmt em{font-style:italic;font-weight:700}
+
+.pov .stmt{font-family:var(--body);font-variation-settings:normal;font-weight:400;color:var(--ink);font-size:18px;letter-spacing:0;line-height:1.55;margin:40px 0 0;max-width:none}
 .pov .capper h3{margin:0 auto;max-width:none}
 .pov .dn{color:var(--yellow);display:inline-block;margin-left:6px}
 .pov .capper{margin-top:80px;padding-top:56px;border-top:1px solid rgba(105,87,255,.35);text-align:center;display:block;gap:24px;align-items:center;flex-wrap:wrap;justify-content:space-between}
@@ -131,7 +131,7 @@ nav .right .btn{height:46px;padding:0 24px}
 
 /* showcase */
 .step{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:88px 0;border-top:1px solid var(--line)}
-.step:first-of-type{border-top:0}
+
 .step.flip .media{order:-1}
 .step .eyebrow{color:var(--yellow);font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;font-size:20px;letter-spacing:-.02em;margin-bottom:16px}
 .step h2{font-size:clamp(28px,3.4vw,44px)}
@@ -192,6 +192,7 @@ nav .right .btn{height:46px;padding:0 24px}
 .cases .art{aspect-ratio:16/10;border-radius:14px;background:linear-gradient(160deg,#2E2560,#1F1843);border:1px solid rgba(105,87,255,.4);margin-bottom:24px;position:relative}
 .cases .art::after{content:"ARTIST IMAGE";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:13px;font-weight:700;color:var(--ink3);letter-spacing:.04em}
 /* faq */
+.faq{background:var(--bg2)}
 .faq .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:64px}
 .faq details{border-bottom:1px solid var(--line);padding:22px 0}
 .faq summary{list-style:none;cursor:pointer;font-weight:700;font-size:18px;display:flex;justify-content:space-between;gap:20px}
