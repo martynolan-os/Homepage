@@ -248,11 +248,12 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 
 <section class="hero"><div class="wrap">
   <div class="center">
-    <div><span class="h1tag" id="h1tag">Option 1 of 2 · click to flip</span></div>
+    <div><span class="h1tag" id="h1tag">Option 1 of 3 · click to flip</span></div>
     <div class="eb">The Fan Relationship Platform for artists</div>
     <div class="h1c" id="h1c">
-      <h1 class="on" data-opt="1" style="font-size:clamp(26px,3.4vw,46px)">Turn your fanbase into your<br>most powerful engine for growth.</h1>
-      <h1 data-opt="2">Build a stronger,<br>more valuable fanbase.</h1>
+      <h1 class="on" data-opt="1" data-sub="Everything you need in one place to build and grow your fan ecosystem." style="font-size:clamp(26px,3.4vw,46px)">Turn your fanbase into your<br>most powerful engine for growth.</h1>
+      <h1 data-opt="2" data-sub="Everything you need in one place to build and grow your fan ecosystem.">Build a stronger,<br>more valuable fanbase.</h1>
+      <h1 data-opt="3" data-sub="Turn your fanbase into your most powerful engine for growth.&#10;Everything you need in one place to build and grow your fan ecosystem.">Build a stronger,<br>more valuable fanbase.</h1>
     </div>
     <p class="sub">Everything you need in one place to build and grow your fan ecosystem.</p>
     <div class="btns"><a class="btn btn-y" href="#">Book a demo</a></div>
@@ -431,7 +432,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 
 <script>
 (function(){var c=document.getElementById('h1c'),t=document.getElementById('h1tag');if(!c)return;var hs=c.querySelectorAll('h1'),i=0,n=hs.length,timer;
-function show(k){hs[i].classList.remove('on');i=(k+n)%n;hs[i].classList.add('on');t.textContent='Option '+(i+1)+' of '+n+' · click to flip';}
+function show(k){hs[i].classList.remove('on');i=(k+n)%n;hs[i].classList.add('on');t.textContent='Option '+(i+1)+' of '+n+' · click to flip';var sub=document.querySelector('.hero .sub');if(sub){sub.innerHTML=hs[i].dataset.sub.replace(/\n/g,"<br>")||'Everything you need in one place to build and grow your fan ecosystem.';}}
 function start(){timer=setInterval(function(){show(i+1)},7000);}
 c.addEventListener('click',function(){clearInterval(timer);show(i+1);start();});
 start();})();
