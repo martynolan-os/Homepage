@@ -268,7 +268,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .ptabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:880px;margin:0 auto 20px}
 .ptab{background:transparent;border:0;border-top:3px solid rgba(252,251,237,.15);color:var(--ink3);text-align:left;padding:14px 4px 0;font:inherit;font-size:15px;font-weight:600;cursor:pointer;position:relative}
 .ptab b{display:block;font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;color:inherit;font-size:13px;margin-bottom:2px}
-.ptab::before{content:"";position:absolute;left:0;top:-3px;height:3px;width:0;background:var(--yellow)}
+.ptab::before{content:"";position:absolute;left:0;top:-3px;height:3px;width:0;background:var(--purple)}
 .ptab.on{color:var(--ink)}.ptab.on b{color:var(--yellow)}
 .ptab.on::before{animation:pbar var(--dur,5.5s) linear forwards}
 .pstage.paused .ptab.on::before{animation:none;width:100%}
@@ -325,7 +325,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .media .tag{top:auto;bottom:auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 .mdots{position:absolute;left:28px;bottom:22px;display:flex;gap:8px;z-index:2}
 .mdots button{width:28px;height:4px;border:0;border-radius:4px;background:rgba(252,251,237,.2);cursor:pointer;padding:0}
-.mdots button.on{background:var(--yellow)}
+.mdots button.on{background:var(--purple)}
 .mdots button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
 .media{aspect-ratio:5/4}
 .media .tag{top:50%}
@@ -357,6 +357,18 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .media .tag{width:80%;text-align:center}
 .fcard{flex:0 1 420px}
 /* v9.3 */
+
+/* fan graph */
+.fangraph{background:var(--bg2);padding:100px 0}
+.fg-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.fg-copy h2{max-width:20ch}
+.fg-copy .lead{margin-top:16px;max-width:52ch}
+.fg-bullets{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.fg-bullets li{padding-left:20px;position:relative;color:var(--ink2);font-size:17px;line-height:1.5}
+.fg-bullets li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--purple)}
+.fg-visual svg{width:100%;height:auto;display:block}
+@media(max-width:900px){.fg-grid{grid-template-columns:1fr}}
+
 .hg.prob-hg{width:auto;max-width:74ch}
 .hg.prob-hg .lead{width:auto;min-width:0}
 .hg.get-hg{width:auto;max-width:74ch}
@@ -502,8 +514,95 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
   <p>That's how you build a stronger, more valuable fanbase.</p>
 </div><div class="btns" style="justify-content:center;margin-top:32px"><a class="btn btn-d" href="#">Read the Inside Out Playbook</a></div></div></section>
 
+<!-- THE PLATFORM -->
+<section class="get"><div class="wrap">
+  <div class="center hg get-hg"><div class="eb">What you get</div><h2>Everything you need in one place.</h2>
+  <p class="lead">Designed to help you build and grow your fan ecosystem. Turn more fan attention into relationships that get stronger and more valuable over time, from the<br><span class="y io-inline">Inside Out</span><span class="y">.</span></p></div>
+  <div class="getrow"><h3>1) Build Your World</h3><div class="grid" style="--n:4"><div><i></i><b>FanHQ</b><p>A home for your fans. Website, link-in-bio, Posts, membership and community in one place.</p></div><div><i></i><b>Membership and Fan Pass</b><p>Free and paid levels with one identity fans carry across your world.</p></div><div><i></i><b>Posts</b><p>Publish to your own feed and inbox. Fans comment, react and share.</p></div><div><i></i><b>Music, merch and tours</b><p>Your music, tour dates and merch in one place your fans can find.</p></div></div></div>
+  <div class="getrow"><h3>2) Bring People Into It</h3><div class="grid" style="--n:4"><div><i></i><b>Fan Profiles</b><p>Every stream, click, purchase and join on one fan record.</p></div><div><i></i><b>Landing pages</b><p>Campaign pages and fan journeys that bring fans in from social.</p></div><div><i></i><b>Syncs and integrations</b><p>Streaming, ticketing, merch and social connected to the fan.</p></div><div><i></i><b>Fanbase analytics</b><p>See who cares, how much, and what's working.</p></div></div></div>
+  <div class="getrow"><h3>3) Put Your Fans First</h3><div class="grid" style="--n:4"><div><i></i><b>Campaigns</b><p>Email, SMS and push from one place, with automations that run without you.</p></div><div><i></i><b>Ticket Unlocks</b><p>Invite-only on-sales that reward the fans who earned it.</p></div><div><i></i><b>Access and rewards</b><p>Gated content, early access, codes and drops for your top fans.</p></div><div><i></i><b>MCP</b><p>Manage your fanbase from Claude, ChatGPT or Gemini, just by asking.</p></div></div></div>
+  <div class="btns"><a class="btn btn-o" href="#">See all features</a></div>
+</div></section>
+
+<!-- FAN GRAPH -->
+<section class="fangraph"><div class="wrap">
+  <div class="fg-grid">
+    <div class="fg-copy">
+      <div class="eb">Fan Data</div>
+      <h2>Every interaction tied to a<br>single Fan Profile.</h2>
+      <p class="lead">Every fan action flows back into a unified Fan Profile you own, building a richer, more complete picture of who your fans are and how much they care.</p>
+      <ul class="fg-bullets">
+        <li>Pulls in signals from streaming, social, ticketing and beyond.</li>
+        <li>The more fans engage, the smarter your fanbase intelligence gets.</li>
+        <li>The smarter it gets, the better the experience you can deliver.</li>
+      </ul>
+    </div>
+    <div class="fg-visual" aria-hidden="true">
+      <svg viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+        <!-- outer ring -->
+        <circle cx="260" cy="260" r="230" fill="none" stroke="rgba(105,87,255,.2)" stroke-width="1" stroke-dasharray="6 5"/>
+        <!-- mid ring -->
+        <circle cx="260" cy="260" r="155" fill="none" stroke="rgba(105,87,255,.3)" stroke-width="1" stroke-dasharray="6 5"/>
+        <!-- inner ring -->
+        <circle cx="260" cy="260" r="74" fill="#1C1730" stroke="rgba(105,87,255,.5)" stroke-width="1.5"/>
+        <!-- center node -->
+        <circle cx="260" cy="260" r="40" fill="var(--purple)"/>
+        <!-- center icon: fan graph dots -->
+        <circle cx="260" cy="260" r="7" fill="#DCD8FF"/>
+        <circle cx="246" cy="252" r="3.5" fill="#DCD8FF"/>
+        <circle cx="274" cy="252" r="3.5" fill="#DCD8FF"/>
+        <circle cx="246" cy="268" r="3.5" fill="#DCD8FF"/>
+        <circle cx="274" cy="268" r="3.5" fill="#DCD8FF"/>
+        <line x1="253" y1="257" x2="246" y2="252" stroke="#19142D" stroke-width="1.5"/>
+        <line x1="267" y1="257" x2="274" y2="252" stroke="#19142D" stroke-width="1.5"/>
+        <line x1="253" y1="263" x2="246" y2="268" stroke="#19142D" stroke-width="1.5"/>
+        <line x1="267" y1="263" x2="274" y2="268" stroke="#19142D" stroke-width="1.5"/>
+        <!-- center label -->
+        <text x="260" y="314" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".08em" font-family="Inter,system-ui,sans-serif">FAN PROFILE</text>
+
+        <!-- spoke lines -->
+        <line x1="260" y1="220" x2="260" y2="31"  stroke="rgba(105,87,255,.5)" stroke-width="1"/>
+        <line x1="260" y1="300" x2="260" y2="489" stroke="rgba(105,87,255,.5)" stroke-width="1"/>
+        <line x1="220" y1="260" x2="100" y2="260" stroke="rgba(105,87,255,.5)" stroke-width="1"/>
+        <line x1="300" y1="260" x2="420" y2="260" stroke="rgba(105,87,255,.5)" stroke-width="1"/>
+        <line x1="208" y1="212" x2="88"  y2="82"  stroke="rgba(105,87,255,.5)" stroke-width="1"/>
+        <line x1="312" y1="308" x2="432" y2="438" stroke="rgba(105,87,255,.5)" stroke-width="1"/>
+
+        <!-- node boxes -->
+        <!-- TOP: Streaming -->
+        <rect x="200" y="14" width="120" height="34" rx="6" fill="#1C1730" stroke="rgba(105,87,255,.7)" stroke-width="1.2"/>
+        <text x="260" y="36" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".07em" font-family="Inter,system-ui,sans-serif">STREAMING</text>
+
+        <!-- BOTTOM: Commerce -->
+        <rect x="200" y="472" width="120" height="34" rx="6" fill="#1C1730" stroke="rgba(105,87,255,.7)" stroke-width="1.2"/>
+        <text x="260" y="494" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".07em" font-family="Inter,system-ui,sans-serif">COMMERCE</text>
+
+        <!-- LEFT: Social -->
+        <rect x="0" y="243" width="100" height="34" rx="6" fill="#1C1730" stroke="rgba(105,87,255,.7)" stroke-width="1.2"/>
+        <text x="50" y="265" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".07em" font-family="Inter,system-ui,sans-serif">SOCIAL</text>
+
+        <!-- RIGHT: IRL Events -->
+        <rect x="420" y="243" width="100" height="34" rx="6" fill="#1C1730" stroke="rgba(105,87,255,.7)" stroke-width="1.2"/>
+        <text x="470" y="265" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".07em" font-family="Inter,system-ui,sans-serif">IRL EVENTS</text>
+
+        <!-- TOP-LEFT: Fan App -->
+        <rect x="34" y="48" width="108" height="34" rx="6" fill="#1C1730" stroke="rgba(105,87,255,.7)" stroke-width="1.2"/>
+        <text x="88" y="70" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".07em" font-family="Inter,system-ui,sans-serif">YOUR SITE</text>
+
+        <!-- BOTTOM-RIGHT: Your Site -->
+        <rect x="378" y="438" width="108" height="34" rx="6" fill="#1C1730" stroke="rgba(105,87,255,.7)" stroke-width="1.2"/>
+        <text x="432" y="460" text-anchor="middle" fill="#9C8FFF" font-size="11" font-weight="700" letter-spacing=".07em" font-family="Inter,system-ui,sans-serif">TICKETING</text>
+      </svg>
+    </div>
+  </div>
+</div></section>
+
+
+
+
+
 <!-- CASE STUDIES -->
-<section class="cases"><div class="wrap">
+<section class="cases" style="background:var(--bg)"><div class="wrap">
   <div class="center hg"><div class="eb">Case studies</div><h2>See what happens when artists stop chasing attention,<br>and start building fandom.</h2></div>
   <div class="tiles">
     <div><div class="art"></div><div class="who">YUNGBLUD <span>/ Build Your World</span></div><div class="stat">1 world</div><h3>One front door for everything</h3><p>Fan HQ, IDOLS, BLUDFEST, the B.R.A.T store, film releases, meetups and surprise live moments, connected into one direct fan experience.</p><a class="link" href="#">See how</a></div>
@@ -513,15 +612,6 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 </div></section>
 
 
-<!-- THE PLATFORM -->
-<section class="get"><div class="wrap">
-  <div class="center hg get-hg"><div class="eb">What you get</div><h2>Everything you need in one place.</h2>
-  <p class="lead">Designed to help you build and grow your fan ecosystem. Turn more fan attention into relationships that get stronger and more valuable over time, from the<br><span class="y io-inline">Inside Out</span><span class="y">.</span></p></div>
-  <div class="getrow"><h3>1) Build Your World</h3><div class="grid" style="--n:4"><div><i></i><b>FanHQ</b><p>A home for your fans. Website, link-in-bio, Posts, membership and community in one place.</p></div><div><i></i><b>Membership and Fan Pass</b><p>Free and paid levels with one identity fans carry across your world.</p></div><div><i></i><b>Posts</b><p>Publish to your own feed and inbox. Fans comment, react and share.</p></div><div><i></i><b>Fanbase API</b><p>Build logged-in fan experiences on your own site or app.</p></div></div></div>
-  <div class="getrow"><h3>2) Bring People Into It</h3><div class="grid" style="--n:4"><div><i></i><b>Fan Profiles</b><p>Every stream, click, purchase and join on one fan record.</p></div><div><i></i><b>Landing pages</b><p>Campaign pages and fan journeys that bring fans in from social.</p></div><div><i></i><b>Syncs and integrations</b><p>Streaming, ticketing, merch and social connected to the fan.</p></div><div><i></i><b>Fanbase analytics</b><p>See who cares, how much, and what's working.</p></div></div></div>
-  <div class="getrow"><h3>3) Put Your Fans First</h3><div class="grid" style="--n:4"><div><i></i><b>Campaigns</b><p>Email, SMS and push from one place, with automations that run without you.</p></div><div><i></i><b>Ticket Unlocks</b><p>Invite-only on-sales that reward the fans who earned it.</p></div><div><i></i><b>Access and rewards</b><p>Gated content, early access, codes and drops for your top fans.</p></div><div><i></i><b>MCP</b><p>Manage your fanbase from Claude, ChatGPT or Gemini, just by asking.</p></div></div></div>
-  <div class="btns"><a class="btn btn-o" href="#">See all features</a></div>
-</div></section>
 
 <!-- WHY OPENSTAGE -->
 <section class="diff" style="background:var(--bg2)"><div class="wrap">
