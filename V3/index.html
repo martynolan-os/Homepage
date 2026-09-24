@@ -316,11 +316,12 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .step .lead{margin-bottom:28px}
 .media .frame{animation:none!important;transition:opacity .5s}
 .media .frame.on{opacity:1}
-.media .frame{padding:28px 28px 56px}
-.media .frame::before{margin-bottom:22px}
-.media .frame b{font-size:20px}
-.media .frame span:not(.tag){min-height:0}
-.media .tag{top:36%}
+.media .frame{padding:28px 28px 56px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.media .frame-inner{text-align:left}
+.media .frame::before{flex:0 0 auto;height:55%;margin-bottom:18px;align-self:stretch}
+.media .frame b{font-size:20px;display:block}
+.media .frame span:not(.tag){min-height:0;display:block}
+.media .tag{top:auto;bottom:auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 .mdots{position:absolute;left:28px;bottom:22px;display:flex;gap:8px;z-index:2}
 .mdots button{width:28px;height:4px;border:0;border-radius:4px;background:rgba(252,251,237,.2);cursor:pointer;padding:0}
 .mdots button.on{background:var(--yellow)}
@@ -511,7 +512,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 
 <!-- CASE STUDIES -->
 <section class="cases"><div class="wrap">
-  <div class="center hg"><div class="eb">Case studies</div><h2>See what happens when artists<br>build from the Inside Out.</h2></div>
+  <div class="center hg"><div class="eb">Case studies</div><h2>See what happens when artists<br>build from the <span class="y">Inside Out</span>.</h2></div>
   <div class="tiles">
     <div><div class="art"></div><div class="who">YUNGBLUD <span>/ Build Your World</span></div><div class="stat">1 world</div><h3>One front door for everything</h3><p>Fan HQ, IDOLS, BLUDFEST, the B.R.A.T store, film releases, meetups and surprise live moments, connected into one direct fan experience.</p><a class="link" href="#">See how</a></div>
     <div><div class="art"></div><div class="who">Hayley Williams <span>/ Bring People Into It</span></div><div class="stat">11x</div><h3>Tickets in the hands of real fans</h3><p>Verified fan access for her biggest tour sold out markets before public on-sale, added second shows and grew her direct fan ecosystem 11x.</p><a class="link" href="#">See how</a></div>
@@ -522,7 +523,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <!-- WHY OPENSTAGE -->
 <section class="diff" style="background:var(--bg)"><div class="wrap">
   <div class="center hg"><div class="eb">Why Openstage</div><h2>Most tools optimize the moment.<br>Openstage optimizes the<br>artist-fan relationship.</h2>
-  <p class="lead">Openstage helps artists not just grow how many fans they have, but deepen how much they care. The platform connects fan experience, identity, and activity around that relationship, so every interaction can make the next one more valuable.</p></div>
+  <p class="lead">Most tools only optimize the moment. Openstage helps artists not just grow how many fans they have, but deepen how much they care. The platform connects fan experience, identity, and activity around that relationship, so every interaction can make the next one more valuable.</p></div>
   <div class="diff-rows">
     <div class="dr"><div class="dr-h"><h3>Fan data + fan experience in one system</h3></div><div class="dr-b"><p>The same system that understands the fan helps create the experience.</p></div></div>
     <div class="dr"><div class="dr-h"><h3>Built around the fan, not the channel</h3></div><div class="dr-b"><p>Music, tickets, merch, messaging and behavior connect around one fan.</p></div></div>
