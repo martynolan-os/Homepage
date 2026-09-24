@@ -354,6 +354,20 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .media .tag{width:80%;text-align:center}
 .fcard{flex:0 1 420px}
 /* v9.3 */
+.hero{padding:56px 0 72px}
+.hero .wrap.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.hero-copy{text-align:left}
+.hero-copy h1{font-size:clamp(34px,3.6vw,52px);margin:0}
+.hero-copy .sub{margin:16px 0 0}
+.hero-copy .btns{justify-content:flex-start!important;margin-top:28px}
+.hero .pstage{margin-top:0}
+.hero .pscreen{aspect-ratio:1/1;max-height:calc(100vh - 160px);margin-left:auto}
+.hero .pf{flex-direction:column;gap:20px;padding:28px}
+.hero .pf .dev{height:auto;width:auto;flex:1 1 auto;min-height:0;max-height:78%}
+.hero .pf .cap{max-width:34ch;text-align:center}
+.hero .pf .cap p{font-size:clamp(16px,1.4vw,20px)}
+.hero .fcard{flex:0 1 auto}
+@media(max-width:900px){.hero .wrap.hero-grid{grid-template-columns:1fr;gap:40px}.hero .pscreen{aspect-ratio:4/5;max-height:none}}
 .get .lead{text-align:center}
 .io-inline{font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;letter-spacing:-.02em;font-size:1.15em;font-weight:900}
 h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
@@ -385,9 +399,9 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 </div></nav>
 
 <!-- HERO -->
-<section class="hero"><div class="wrap">
-  <div class="center hg">
-    <h1>Build your fanbase<br>from the <span class="y">Inside Out</span>.</h1>
+<section class="hero"><div class="wrap hero-grid">
+  <div class="hg left hero-copy">
+    <h1>Build your fanbase from the<br><span class="y">Inside Out</span>.</h1>
     <p class="sub">Openstage gives fans one place to join and go deeper, brings fan identity and activity together so you know your fans, and gives you the tools to create better fan experiences that deepen fandom and drive growth.</p>
     <div class="btns"><a class="btn btn-y" href="#">Book a demo</a></div>
   </div>
