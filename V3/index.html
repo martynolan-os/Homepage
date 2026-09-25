@@ -288,6 +288,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .fcard .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--purple2));flex:none}
 .fcard .nm{font-weight:700;font-size:17px}.fcard .meta{color:var(--ink3);font-size:13px}
 .fcard .pill{margin-left:auto;background:var(--yellow);color:#19142D;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.tc-fan-id{font-size:18px;color:rgba(255,255,255,.45);font-weight:500;line-height:1}
 .fcard .bar{height:8px;border-radius:99px;background:rgba(252,251,237,.1);margin:18px 0 6px;overflow:hidden}
 .fcard .bar i{display:block;height:100%;width:92%;background:linear-gradient(90deg,var(--purple),var(--yellow))}
 .fcard .bl{display:flex;justify-content:space-between;font-size:12px;color:var(--ink3)}
@@ -359,8 +360,49 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 /* v9.3 */
 .hero-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;width:100%;align-self:center}.hd{width:10px;height:10px;border-radius:50%;border:0;background:rgba(252,251,237,.2);cursor:pointer;padding:0;transition:background .3s}.hd.on{background:var(--yellow)}.hd:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
 
+.onecon{background:var(--bg)}
+.onecon-hg{width:auto;max-width:72ch}
+.onecon-hg .lead{width:auto!important;min-width:0!important;max-width:75ch!important}
+
+
+/* two-state visual */
+.twostate-wrap{margin-top:56px}
+.twostate{display:grid;grid-template-columns:1fr 80px 1fr;align-items:center;gap:16px}
+.ts-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:14px}
+.ts-footnote{font-size:12px;color:var(--ink3);margin-top:14px;text-align:center;line-height:1.5}
+.ts-arrow{display:flex;align-items:center;justify-content:center}
+
+/* left: scattered cards */
+.ts-cards{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:10px}
+.ts-card{background:rgba(255,255,255,.03);border:1.5px dashed rgba(180,180,180,.3);border-radius:12px;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative;box-sizing:border-box}
+.tc-icon{font-size:22px;line-height:1}
+.tc-name{font-size:20px;font-weight:700;letter-spacing:.04em;color:var(--ink3);text-align:center;line-height:1}
+
+/* lock icons on each card */
+
+
+
+/* right: FanHQ surface */
+.ts-fanhq{background:#1C1730;border:1.5px solid rgba(105,87,255,.55);border-radius:16px;overflow:hidden;flex:1;display:flex;flex-direction:column;min-height:0}
+.fhq-header{background:#160E2B;padding:12px 16px;border-bottom:1px solid rgba(105,87,255,.2)}
+.fhq-logo{font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--yellow);display:block;margin-bottom:10px}
+.fhq-tabs{display:flex;gap:5px;flex-wrap:wrap}
+.fhq-tab{font-size:9px;font-weight:600;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.06);color:var(--ink3);cursor:default}
+.fhq-tab.on{background:var(--purple);color:#fff}
+.fhq-fan{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(105,87,255,.15)}
+.fhq-av{width:36px;height:36px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff;flex:none}
+.fhq-name{font-weight:700;font-size:13px}
+.fhq-pass{background:var(--yellow);color:#19142D;font-size:9px;font-weight:800;padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.fhq-meta{font-size:11px;color:var(--ink3);margin-top:2px}
+.fhq-timeline{padding:10px 16px 14px;display:flex;flex-direction:column;gap:0}
+.fhq-event{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--ink2);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.fhq-event:last-child{border-bottom:0}
+.fhq-dot{width:7px;height:7px;border-radius:50%;background:var(--purple);flex:none}
+.fhq-event em{margin-left:auto;font-style:normal;color:var(--ink3);font-size:10px}
+@media(max-width:900px){.twostate{grid-template-columns:1fr;gap:24px}.ts-arrow svg{transform:rotate(90deg)}}
+
 /* fan graph */
-.fangraph{background:var(--bg);padding:100px 0}
+.fangraph{background:var(--bg2);padding:100px 0}
 .fg-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
 .fg-copy h2{max-width:20ch}
 .fg-copy .lead{margin-top:16px;max-width:52ch}
@@ -471,7 +513,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <!-- PROBLEM -->
 <section class="pov prob" style="padding-bottom:88px"><div class="wrap">
   <div class="center hg prob-hg"><div class="eb">Problem</div><h2>Growth is broken.</h2>
-  <p class="lead">The industry spent the past decade optimizing for attention.<br>Artists have learned to grow from the outside in: chasing attention, sending fans into platforms they don't control, and hoping some of it turns into lasting fandom.</p></div>
+  <p class="lead">The industry spent the past decade optimizing for attention.<br>Artists have learned to grow from the outside in: continually chasing attention, sending fans into platforms they don't control, and hoping some of it turns into lasting fandom.</p></div>
   <div class="tiles">
     <div><h3>Expensive.</h3><p>You have to keep paying, posting and competing to reach people again.</p></div>
     <div><h3>Unreliable.</h3><p>What works today can disappear tomorrow because the platform controls the relationship.</p></div>
@@ -489,7 +531,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
     <div class="hg left">
       <div class="eyebrow">1) Build Your World</div>
       <h2>Give fans somewhere<br>to join and go deeper.</h2>
-      <p class="lead">FanHQ brings your music, tours, merch, Posts, membership and community into one place you own that looks and feels like you. Fans join as members, not followers.</p>
+      <p class="lead">FanHQ brings your music, tours, merch, Posts, membership, and community into one place you own that looks and feels like you. Fans join as members, not followers.</p>
     </div>
     <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Build your FanHQ.</b><span>Your music, tours, merch and Posts in one place you own.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Make it look and feel like you.</b><span>Your type, your colors, your artwork, down to the buttons.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Fans join as members.</b><span>They sign up, log in and come back as themselves.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Every member gets a Fan Pass.</b><span>One identity across everything you do.</span></div><div class="mdots"><button type="button" aria-label="Show Build your FanHQ" class="on"></button><button type="button" aria-label="Show Make it look and feel like you"></button><button type="button" aria-label="Show Fans join as members"></button><button type="button" aria-label="Show Every member gets a Fan Pass"></button></div></div>
   </div>
@@ -497,17 +539,17 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
     <div class="hg left">
       <div class="eyebrow">2) Bring People Into It</div>
       <h2>Know who your fans are<br>and how much they care.</h2>
-      <p class="lead">Every join, click, purchase and ticket connects to the same Fan Profile. Bring streaming, ticketing, merch and messaging together, then see who cares and what’s working in Fanbase Analytics.</p>
+      <p class="lead">Every join, click, purchase and ticket connects to the same Fan Profile. Bring streaming, ticketing, merch, and messaging together, then see who cares and what’s working in Fanbase Analytics.</p>
     </div>
-    <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Bring fans in.</b><span>Landing Pages turn attention into fan relationships you can build on.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Connect fan activity.</b><span>Streaming, tickets, merch and more, connected around the fan.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Know who is showing up.</b><span>Onboard and verify real fans.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Build one Fan Profile of record.</b><span>One fan. One relationship.</span></div><div class="mdots"><button type="button" aria-label="Show Bring fans in" class="on"></button><button type="button" aria-label="Show Connect fan activity"></button><button type="button" aria-label="Show Know who is showing up"></button><button type="button" aria-label="Show Build one Fan Profile of record"></button></div></div>
+    <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Bring fans in.</b><span>Landing Pages turn attention into fan relationships you can build on.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Connect fan activity.</b><span>Streaming, tickets, merch, and more, connected around the fan.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Know who is showing up.</b><span>Onboard and verify real fans.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Build one Fan Profile of record.</b><span>One fan. One relationship.</span></div><div class="mdots"><button type="button" aria-label="Show Bring fans in" class="on"></button><button type="button" aria-label="Show Connect fan activity"></button><button type="button" aria-label="Show Know who is showing up"></button><button type="button" aria-label="Show Build one Fan Profile of record"></button></div></div>
   </div>
   <div class="step" data-step>
     <div class="hg left">
       <div class="eyebrow">3) Put Your Fans First</div>
       <h2>Turn what you know into<br>better fan experiences.</h2>
-      <p class="lead">Use fan identity, behavior, and how much they care to personalize campaigns, communicate directly, create access and reward the fans who care most to deepen fandom.</p>
+      <p class="lead">Use fan identity, behavior, and how much they care to personalize campaigns, communicate directly, create access, and reward the fans who care most to deepen fandom.</p>
     </div>
-    <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Communicate directly.</b><span>Posts, email, SMS and push.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Reach the right fans.</b><span>Build audiences around identity, behavior and how much they care.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Create better moments.</b><span>Personalize campaigns, access and experiences around releases, tours and other key moments.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Recognize and reward your best fans.</b><span>Give the fans who care most better access, content and rewards.</span></div><div class="mdots"><button type="button" aria-label="Show Communicate directly" class="on"></button><button type="button" aria-label="Show Reach the right fans"></button><button type="button" aria-label="Show Create better moments"></button><button type="button" aria-label="Show Recognize and reward your best fans"></button></div></div>
+    <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Communicate directly.</b><span>Posts, email, SMS and push.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Reach the right fans.</b><span>Build audiences around identity, behavior, and how much they care.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Create better moments.</b><span>Personalize campaigns, access, and experiences around releases, tours and other key moments.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Recognize and reward your best fans.</b><span>Give the fans who care most better access, content and rewards.</span></div><div class="mdots"><button type="button" aria-label="Show Communicate directly" class="on"></button><button type="button" aria-label="Show Reach the right fans"></button><button type="button" aria-label="Show Create better moments"></button><button type="button" aria-label="Show Recognize and reward your best fans"></button></div></div>
   </div>
 </div></section>
 
@@ -520,7 +562,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <section class="cases" style="background:var(--bg)"><div class="wrap">
   <div class="center hg"><div class="eb">Case studies</div><h2>See what happens when artists stop chasing attention,<br>and start building fandom.</h2></div>
   <div class="tiles">
-    <div><div class="art"></div><div class="who">YUNGBLUD <span>/ Build Your World</span></div><div class="stat">1 world</div><h3>One front door for everything</h3><p>Fan HQ, IDOLS, BLUDFEST, the B.R.A.T store, film releases, meetups and surprise live moments, connected into one direct fan experience.</p><a class="link" href="#">See how</a></div>
+    <div><div class="art"></div><div class="who">YUNGBLUD <span>/ Build Your World</span></div><div class="stat">1 world</div><h3>One front door for everything</h3><p>Fan HQ, IDOLS, BLUDFEST, the B.R.A.T store, film releases, meetups, and surprise live moments, connected into one direct fan experience.</p><a class="link" href="#">See how</a></div>
     <div><div class="art"></div><div class="who">Hayley Williams <span>/ Bring People Into It</span></div><div class="stat">11x</div><h3>Tickets in the hands of real fans</h3><p>Verified fan access for her biggest tour sold out markets before public on-sale, added second shows and grew her direct fan ecosystem 11x.</p><a class="link" href="#">See how</a></div>
     <div><div class="art"></div><div class="who">Paul McCartney <span>/ Put Your Fans First</span></div><div class="stat">+93%</div><h3>Rewarding the fans who care most</h3><p>Identified 30 of his most engaged fans across LA and London for intimate album listening experiences, while growing known fan location data by 93%.</p><a class="link" href="#">See how</a></div>
   </div>
@@ -536,11 +578,108 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
   <p class="lead">One place to build and grow your fan ecosystem and turn more fan attention into relationships that get stronger and more valuable over time.</p></div>
   <div class="getrow"><h3>1) Build Your World</h3><div class="grid" style="--n:4"><div><i></i><b>FanHQ</b><p>A home for your fans. Website, link-in-bio, Posts, membership and community in one place.</p></div><div><i></i><b>Membership and Fan Pass</b><p>Free and paid levels with one identity fans carry across your world.</p></div><div><i></i><b>Posts</b><p>Publish to your own feed and fan inboxes. Fans comment, react and share.</p></div><div><i></i><b>Music, merch and tours</b><p>Your music, tour dates and merch in one place your fans can find.</p></div></div></div>
   <div class="getrow"><h3>2) Bring People Into It</h3><div class="grid" style="--n:4"><div><i></i><b>Fan Profiles</b><p>Every stream, click, purchase and join on one fan record.</p></div><div><i></i><b>Landing pages</b><p>Campaign pages and fan journeys that bring fans in from social.</p></div><div><i></i><b>Syncs and integrations</b><p>Streaming, ticketing, merch and social connected to the fan.</p></div><div><i></i><b>Fanbase analytics</b><p>See who cares, how much, and what's working.</p></div></div></div>
-  <div class="getrow"><h3>3) Put Your Fans First</h3><div class="grid" style="--n:4"><div><i></i><b>Campaigns</b><p>Email, SMS, push and notifications from one place, with automations that run without you.</p></div><div><i></i><b>Ticket Unlocks</b><p>Invite-only on-sales that reward the fans who earned it.</p></div><div><i></i><b>Access and rewards</b><p>Gated content, early access, codes and drops for your top fans.</p></div><div><i></i><b>MCP</b><p>Bring Claude, ChatGPT or Gemini into your fanbase. Ask who cares most, what's working, and what to do next.</p></div></div></div>
+  <div class="getrow"><h3>3) Put Your Fans First</h3><div class="grid" style="--n:4"><div><i></i><b>Campaigns</b><p>Email, SMS, push, and notifications from one place, with automations that run without you.</p></div><div><i></i><b>Ticket Unlocks</b><p>Invite-only on-sales that reward the fans who earned it.</p></div><div><i></i><b>Access and rewards</b><p>Gated content, early access, codes and drops for your top fans.</p></div><div><i></i><b>MCP</b><p>Bring Claude, ChatGPT or Gemini into your fanbase. Ask who cares most, what's working, and what to do next.</p></div></div></div>
   <div class="btns"><a class="btn btn-o" href="#">See all features</a></div>
 </div></section>
 
 
+
+<!-- ONE CONNECTED -->
+<section class="onecon"><div class="wrap">
+  <div class="center hg onecon-hg">
+    <div class="eb">One connected fan experience</div>
+    <h2>One fan.<br>One relationship.</h2>
+    <p class="lead">Most artists are paying for a website, link-in-bio, mailing list, SMS, pre-save and membership tool that don't talk to each other. Openstage brings them together around the fan relationship, so every join, click and purchase builds on the last instead of starting over.</p>
+  <div class="twostate-wrap">
+  <div class="twostate" id="twostate">
+
+    <!-- LEFT: Fragmented stack -->
+    <div class="ts-side ts-left">
+      <div class="ts-label">Before</div>
+      <div class="ts-cards" id="ts-cards">
+        <div class="ts-card tc1">
+          <span class="tc-icon">🌐</span>
+          <span class="tc-name">Website</span>
+          <div class="tc-fan-id">Sam Rodriguez</div>
+          <div class="tc-lock">🔒</div>
+        </div>
+        <div class="ts-card tc2">
+          <span class="tc-icon">🔗</span>
+          <span class="tc-name">Link-in-bio</span>
+          <div class="tc-fan-id">sam.r@gmail</div>
+          <div class="tc-lock">🔒</div>
+        </div>
+        <div class="ts-card tc3">
+          <span class="tc-icon">📧</span>
+          <span class="tc-name">Mailing list</span>
+          <div class="tc-fan-id">@samr</div>
+          <div class="tc-lock">🔒</div>
+        </div>
+        <div class="ts-card tc4">
+          <span class="tc-icon">💬</span>
+          <span class="tc-name">SMS</span>
+          <div class="tc-fan-id">S. Rodriguez</div>
+          <div class="tc-lock">🔒</div>
+        </div>
+        <div class="ts-card tc5">
+          <span class="tc-icon">💾</span>
+          <span class="tc-name">Pre-save</span>
+          <div class="tc-fan-id">s.rodriguez</div>
+          <div class="tc-lock">🔒</div>
+        </div>
+        <div class="ts-card tc6">
+          <span class="tc-icon">🎟</span>
+          <span class="tc-name">Membership</span>
+          <div class="tc-fan-id">sam_rod</div>
+          <div class="tc-lock">🔒</div>
+        </div>      </div>
+      <div class="ts-footnote">6 tools. 6 versions of the same fan. No connection.</div>
+    </div>
+
+    <!-- CONVERGING ARROW -->
+    <div class="ts-arrow">
+      <svg viewBox="0 0 72 32" xmlns="http://www.w3.org/2000/svg" width="72" height="32">
+        <line x1="2" y1="16" x2="52" y2="16" stroke="#9C8FFF" stroke-width="6" stroke-linecap="round"/>
+        <polyline points="42,5 62,16 42,27" fill="none" stroke="#9C8FFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- RIGHT: FanHQ -->
+    <div class="ts-side ts-right">
+      <div class="ts-label">After</div>
+      <div class="ts-fanhq">
+        <div class="fhq-header">
+          <span class="fhq-logo">((·)) FanHQ</span>
+          <div class="fhq-tabs">
+            <span class="fhq-tab on">Website</span>
+            <span class="fhq-tab">Bio</span>
+            <span class="fhq-tab">Mail</span>
+            <span class="fhq-tab">SMS</span>
+            <span class="fhq-tab">Saves</span>
+            <span class="fhq-tab">Members</span>
+          </div>
+        </div>
+        <div class="fhq-fan">
+          <div class="fhq-av">S</div>
+          <div class="fhq-info">
+            <div class="fhq-name">Samantha Rodriguez <span class="fhq-pass">Fan Pass</span></div>
+            <div class="fhq-meta">One fan. One relationship.</div>
+          </div>
+        </div>
+        <div class="fhq-timeline">
+          <div class="fhq-event"><span class="fhq-dot"></span><span>Joined FanHQ</span><em>Mar 2</em></div>
+          <div class="fhq-event"><span class="fhq-dot"></span><span>Streamed the new single</span><em>Mar 9</em></div>
+          <div class="fhq-event"><span class="fhq-dot"></span><span>Bought the tour hoodie</span><em>Mar 14</em></div>
+          <div class="fhq-event"><span class="fhq-dot"></span><span>Saved for presale</span><em>Mar 21</em></div>
+        </div>
+      </div>
+      <div class="ts-footnote">1 platform. 1 fan record. Every action connected.</div>
+    </div>
+
+  </div>
+</div>
+  </div>
+</div></section>
 
 <!-- FAN GRAPH -->
 <section class="fangraph"><div class="wrap">
@@ -550,7 +689,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
       <h2>Every interaction tied to a<br>single Fan Profile.</h2>
       <p class="lead">Every fan action flows back into a unified Fan Profile you own, building a richer, more complete picture of who your fans are and how much they care.</p>
       <ul class="fg-bullets">
-        <li>Pulls in signals from streaming, social, ticketing and beyond.</li>
+        <li>Pulls in signals from streaming, social, ticketing, and beyond.</li>
         <li>The more fans engage, the smarter your fanbase intelligence gets.</li>
         <li>The smarter it gets, the better the experience you can deliver.</li>
       </ul>
@@ -602,20 +741,20 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 
 
 <!-- WHY OPENSTAGE -->
-<section class="diff" style="background:var(--bg2)"><div class="wrap">
+<section class="diff" style="background:var(--bg)"><div class="wrap">
   <div class="center hg"><div class="eb">Why Openstage</div><h2>Most tools only optimize the moment.<br>Openstage optimizes the<br>artist-fan relationship.</h2>
   <p class="lead">Openstage helps artists not just grow how many fans they have, but deepen how much they care. The platform connects fan experience, identity, and activity around that relationship, so every interaction can make the next one more valuable.</p></div>
   <div class="diff-rows">
     <div class="dr"><div class="dr-h"><h3>Fan data + fan experience in one system</h3></div><div class="dr-b"><p>The same system that understands the fan helps create the experience.</p></div></div>
-    <div class="dr"><div class="dr-h"><h3>Built around the fan, not the channel</h3></div><div class="dr-b"><p>Music, tickets, merch, messaging and behavior connect around one fan.</p></div></div>
+    <div class="dr"><div class="dr-h"><h3>Built around the fan, not the channel</h3></div><div class="dr-b"><p>Music, tickets, merch, messaging, and behavior connect around one fan.</p></div></div>
     <div class="dr"><div class="dr-h"><h3>Open by design</h3></div><div class="dr-b"><p>Connect the tools you already use and build on top of Openstage.</p></div></div>
   </div>
 </div></section>
 
 <!-- FAQ -->
-<section class="faq" style="background:var(--bg)"><div class="wrap">
+<section class="faq" style="background:var(--bg2)"><div class="wrap">
   <div><div class="hg left"><div class="eb">FAQ</div><h2>More questions?</h2><p class="lead">Here's what most artists ask first.</p></div></div>
-  <div><details open><summary>What is Openstage?</summary><p>Openstage is the Fan Relationship Platform that helps artists grow by building stronger relationships with their fans. Purpose-built around the belief that growth is defined not just by how many fans an artist has, but how much they care, Openstage helps artists turn deeper fandom into Fan-Led Growth. Combining artist-owned fan experiences with the richest fan data in music, Openstage powers artist-fan relationships for over 30 million fans worldwide.</p></details><details><summary>How is Openstage different from direct-to-fan and CRM tools?</summary><p>Those tools are built for customers and optimize the moment: a send, a drop, an on-sale. Openstage is built for fans and optimizes the artist-fan relationship. You still get everything they do, but every interaction connects back to who your fans are and how much they care, so every moment builds fandom, not just reach.</p></details><details><summary>What tools can Openstage replace?</summary><p>Your website, link-in-bio, mailing list, SMS, pre-save and membership tools. Most artists are paying for five or six things that Openstage does in one place, connected.</p></details><details><summary>How easy is it to switch?</summary><p>Openstage is built to be self-serve, with a full knowledge base, video tutorials and step-by-step guides to get you started. And our onboarding and support teams are with you from day one if you need them, covering migration, integrations and setup every step of the way.</p></details><details><summary>Do I need to be a data expert to use Openstage?</summary><p>No. Openstage makes the richest fan data in music easy to understand and act on. The dashboard gives you a clear view of your fanbase, and Openstage MCP connects that data to Claude, ChatGPT and Gemini so you can ask questions in plain English, find opportunities, shape strategy and know what to do next. No exports, no spreadsheets, no learning curve.</p></details><details><summary>Can I bring my existing fan data into Openstage?</summary><p>Yes. We support imports from most major platforms and our team will help you consolidate what you already have into one clean fanbase.</p></details><details><summary>Who owns my fan data?</summary><p>You do. Always. Openstage never sells or shares your fan data with third parties. What you build on Openstage stays yours.</p></details><details><summary>What does Openstage cost?</summary><p>Openstage comes in two plans: Build, for artists growing their fanbase, and Legendary, for artists operating at scale. See the pricing page for a full breakdown, or book a demo and we'll recommend the right plan for your needs.</p></details></div>
+  <div><details open><summary>What is Openstage?</summary><p>Openstage is the Fan Relationship Platform that helps artists grow by building stronger relationships with their fans. Purpose-built around the belief that growth is defined not just by how many fans an artist has, but how much they care, Openstage helps artists turn deeper fandom into Fan-Led Growth. Combining artist-owned fan experiences with the richest fan data in music, Openstage powers artist-fan relationships for over 30 million fans worldwide.</p></details><details><summary>How is Openstage different from direct-to-fan and CRM tools?</summary><p>Those tools are built for customers and optimize the moment: a send, a drop, an on-sale. Openstage is built for fans and optimizes the artist-fan relationship. You still get everything they do, but every interaction connects back to who your fans are and how much they care, so every moment builds fandom, not just reach.</p></details><details><summary>What tools can Openstage replace?</summary><p>Your website, link-in-bio, mailing list, SMS, pre-save, and membership tools. Most artists are paying for five or six things that Openstage does in one place, connected.</p></details><details><summary>How easy is it to switch?</summary><p>Openstage is built to be self-serve, with a full knowledge base, video tutorials and step-by-step guides to get you started. And our onboarding and support teams are with you from day one if you need them, covering migration, integrations and setup every step of the way.</p></details><details><summary>Do I need to be a data expert to use Openstage?</summary><p>No. Openstage makes the richest fan data in music easy to understand and act on. The dashboard gives you a clear view of your fanbase, and Openstage MCP connects that data to Claude, ChatGPT and Gemini so you can ask questions in plain English, find opportunities, shape strategy and know what to do next. No exports, no spreadsheets, no learning curve.</p></details><details><summary>Can I bring my existing fan data into Openstage?</summary><p>Yes. We support imports from most major platforms and our team will help you consolidate what you already have into one clean fanbase.</p></details><details><summary>Who owns my fan data?</summary><p>You do. Always. Openstage never sells or shares your fan data with third parties. What you build on Openstage stays yours.</p></details><details><summary>What does Openstage cost?</summary><p>Openstage comes in two plans: Build, for artists growing their fanbase, and Legendary, for artists operating at scale. See the pricing page for a full breakdown, or book a demo and we'll recommend the right plan for your needs.</p></details></div>
 </div></section>
 
 <!-- FINAL CTA -->
@@ -663,6 +802,8 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
     go();
   });
 })();
+(function(){function sync(){var cards=document.querySelector(".ts-cards");var fhq=document.querySelector(".ts-fanhq");if(!cards||!fhq) return;var fhqH=fhq.getBoundingClientRect().height;var sz=Math.floor((fhqH-10)/2);cards.style.height=fhqH+"px";cards.style.gridTemplateRows=sz+"px "+sz+"px";cards.style.gridTemplateColumns=sz+"px "+sz+"px "+sz+"px";
+}window.addEventListener("load",sync);window.addEventListener("resize",sync);setTimeout(sync,300);})();
 </script>
 </body>
 </html>
