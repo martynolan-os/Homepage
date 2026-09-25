@@ -154,7 +154,8 @@ nav .right .btn{height:46px;padding:0 24px}
 .band{padding:56px 0;background:linear-gradient(90deg,#241C45,#2E2560 50%,#241C45);border-top:1px solid rgba(105,87,255,.35);border-bottom:1px solid rgba(105,87,255,.35);text-align:center}
 .band .better{margin:0;color:var(--ink);font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.02em;line-height:1.1}
 .band .dn{color:var(--yellow);margin-left:6px}
-.sol-sub{color:var(--ink2);font-size:clamp(15px,1.2vw,17px);line-height:1.6;max-width:52ch;margin:20px auto 0;text-align:center}
+.step-lines{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:8px}.step-lines li{font-size:14px;color:var(--ink2);padding-left:18px;position:relative;line-height:1.4}.step-lines li::before{content:"";position:absolute;left:0;top:6px;width:7px;height:7px;border-radius:50%;background:var(--purple)}
+.sol-sub{color:var(--ink2);font-size:clamp(15px,1.2vw,17px);line-height:1.6;max-width:68ch;margin:20px auto 0;text-align:center}
 /* loop */
 .loop{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:20px;align-items:stretch;margin-top:64px}
 .loop .node{border:2px solid var(--purple);border-radius:20px;padding:32px 28px}
@@ -538,9 +539,10 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
   </div>
   <div class="step flip" data-step>
     <div class="hg left">
-      <div class="eyebrow">2) Bring People Into It</div>
-      <h2>Know who your fans are<br>and how much they care.</h2>
-      <p class="lead">Every join, click, purchase and ticket connects to the same Fan Profile. Bring streaming, ticketing, merch, and messaging together, then see who cares and what’s working in Fanbase Analytics.</p>
+      <div class="eyebrow">Fan data</div>
+      <h2>Know who cares,<br>and how much.</h2>
+      <p class="lead">Every stream, ticket, purchase and join adds to what you know about each fan. Openstage shows you who your most engaged fans are, what they respond to, and where to focus next.</p>
+      <ul class="step-lines"><li>Signals from streaming, social, ticketing and beyond.</li><li>The more fans do, the more you know.</li><li>The more you know, the better the experience.</li></ul>
     </div>
     <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Bring fans in.</b><span>Landing Pages turn attention into fan relationships you can build on.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Connect fan activity.</b><span>Streaming, tickets, merch, and more, connected around the fan.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Know who is showing up.</b><span>Onboard and verify real fans.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Build one Fan Profile of record.</b><span>One fan. One relationship.</span></div><div class="mdots"><button type="button" aria-label="Show Bring fans in" class="on"></button><button type="button" aria-label="Show Connect fan activity"></button><button type="button" aria-label="Show Know who is showing up"></button><button type="button" aria-label="Show Build one Fan Profile of record"></button></div></div>
   </div>
@@ -686,13 +688,13 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <section class="fangraph"><div class="wrap">
   <div class="fg-grid">
     <div class="fg-copy">
-      <div class="eb">Fan Data</div>
-      <h2>Every interaction tied to a<br>single Fan Profile.</h2>
-      <p class="lead">Every fan action flows back into a unified Fan Profile you own, building a richer, more complete picture of who your fans are and how much they care.</p>
+      <div class="eb">Fan data</div>
+      <h2>Know who cares,<br>and how much.</h2>
+      <p class="lead">Every stream, ticket, purchase and join adds to what you know about each fan. Openstage shows you who your most engaged fans are, what they respond to, and where to focus next.</p>
       <ul class="fg-bullets">
-        <li>Pulls in signals from streaming, social, ticketing, and beyond.</li>
-        <li>The more fans engage, the smarter your fanbase intelligence gets.</li>
-        <li>The smarter it gets, the better the experience you can deliver.</li>
+        <li>Signals from streaming, social, ticketing and beyond.</li>
+        <li>The more fans do, the more you know.</li>
+        <li>The more you know, the better the experience.</li>
       </ul>
     </div>
     <div class="fg-visual" aria-hidden="true">
