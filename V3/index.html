@@ -331,7 +331,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .media .tag{top:50%}
 .payoff-band{padding:80px 0;background:linear-gradient(100deg,#19142D 0%,var(--purple2) 45%,#4A62FF 100%);text-align:center}
 .payoff-band h2{max-width:none;margin:0 auto;font-size:clamp(26px,3.2vw,44px)}
-.payoff-band p{margin-top:16px;font-size:clamp(17px,1.4vw,21px);color:var(--ink);font-weight:600}
+.payoff-band p{margin-top:16px;font-size:clamp(17px,1.4vw,21px);color:var(--ink);font-weight:400}
 
 /* platform */
 .plat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
@@ -357,6 +357,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .media .tag{width:80%;text-align:center}
 .fcard{flex:0 1 420px}
 /* v9.3 */
+.hero-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;width:100%;align-self:center}.hd{width:10px;height:10px;border-radius:50%;border:0;background:rgba(252,251,237,.2);cursor:pointer;padding:0;transition:background .3s}.hd.on{background:var(--yellow)}.hd:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
 
 /* fan graph */
 .fangraph{background:var(--bg);padding:100px 0}
@@ -453,9 +454,10 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
           <div class="notif"><small><span>OPENSTAGE</span><span>now</span></small><p>Sam, you're one of the fans who's been here since day one. Your early access to the NYC show is open.</p></div>
           <div class="unlock"><b>Presale unlocked</b><span>Reserved for verified top fans before public on-sale.</span><a class="btn btn-y" href="#" tabindex="-1">Get tickets</a></div>
         </div>
-        <div class="cap"><small>Personalized Experience</small><p>The right fans get the right moment, automatically.</p></div>
+        <div class="cap"><small>Personalized Experiences</small><p>Prioritize the fans who care most.</p></div>
       </div>
     </div>
+  <div class="hero-dots" aria-label="3 frames"><button class="hd on" data-pi="0" aria-label="Frame 1"></button><button class="hd" data-pi="1" aria-label="Frame 2"></button><button class="hd" data-pi="2" aria-label="Frame 3"></button></div>
   </div>
 </div></section>
 
@@ -641,9 +643,12 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
     var tabs=st.querySelectorAll('.ptab'),fs=st.querySelectorAll('.pf'),i=0,t,D=5500;
     function show(k){i=(k+fs.length)%fs.length;
       tabs.forEach(function(x,j){x.classList.toggle('on',j===i);x.setAttribute('aria-selected',j===i)});
+      hdots.forEach(function(x,j){x.classList.toggle('on',j===i)});
       fs.forEach(function(x,j){x.classList.toggle('on',j===i)});}
     function go(){clearInterval(t);if(!rm)t=setInterval(function(){show(i+1)},D);}
     tabs.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.i);go();})});
+    var hdots=document.querySelectorAll('.hd');
+    hdots.forEach(function(d){d.addEventListener('click',function(){show(+d.dataset.pi);go();})});
     if(rm)st.classList.add('paused');
     go();
   }
