@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v2 -->
+<!-- v3 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -467,6 +467,21 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 @media(max-width:1000px){.get .getrow .grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.get .getrow .grid{grid-template-columns:1fr}}
 @media(max-width:900px){.dr{grid-template-columns:1fr;gap:10px}.dr-h h3{text-align:left}.cta h2{white-space:normal}.cta p{white-space:normal}.pf .cap{display:none}.logo-wrap{position:static;transform:none;align-items:flex-start}nav .wrap{gap:12px;padding:0 20px}.logo-tag{font-size:8px;letter-spacing:.03em}nav .right .btn{padding:0 16px;height:40px;font-size:12px}}
+/* testimonial strip */
+.quotes{padding:112px 0;background:var(--bg2);overflow:hidden}
+.quotes .q-hg{text-align:center;margin-bottom:36px}
+.quotes .q-hg h2{margin:0 auto;max-width:none}
+.quotes .q-hg .lead{margin:10px auto 0;text-align:center}
+.q-track{display:flex;gap:20px;width:max-content;animation:q-slide 90s linear infinite}
+.quotes:hover .q-track{animation-play-state:paused}
+@keyframes q-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.q-tile{width:380px;flex:0 0 380px;background:rgba(255,255,255,.04);border:1px solid rgba(105,87,255,.35);border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;justify-content:flex-start;gap:18px;align-self:flex-start}
+.q-tile p{color:var(--ink);font-size:15px;line-height:1.55;position:relative;padding-left:16px}
+.q-tile p::before{content:"\201C";color:var(--yellow);font-family:var(--display);font-weight:900;font-size:1.3em;line-height:1;position:absolute;left:0;top:0}
+.q-tile .q-who{font-size:13px;color:var(--ink2);line-height:1.4}
+.q-tile .q-who b{display:block;color:var(--yellow);font-weight:700}
+@media(prefers-reduced-motion:reduce){.q-track{animation:none}}
+@media(max-width:600px){.q-tile{width:300px;flex-basis:300px}}
 </style>
 </head>
 <body>
@@ -755,8 +770,32 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
   <p class="lead" style="width:auto!important;max-width:none!important;white-space:nowrap">Most tools optimize the moment. Openstage optimizes the artist-fan relationship.<br>That's what actually creates value. Openstage brings the experience and the understanding<br>of the fan together around that relationship, so the value you create grows over time.</p></div>
 </div></section>
 
+<!-- TESTIMONIALS -->
+<section class="quotes">
+  <div class="wrap q-hg"><div class="eb">Artist and manager testimonials</div><h2>Don't just take our word for it.<br>Take theirs.</h2>
+  <p class="lead" style="max-width:none">The biggest artists in music have the strongest relationships with their fans.<br>That's why they choose to build their fanbases on Openstage.</p></div>
+  <div class="q-track">
+    <div class="q-tile"><p>Openstage is more than just another mailing list, it's a direct line from me to my fans. I wanted a way to give back to every single fan and make sure the most dedicated get rewarded. Openstage is how I can do that.</p><div class="q-who"><b>Yungblud</b>Artist</div></div>
+    <div class="q-tile"><p>Openstage is the quiet storm currently hitting the music industry.</p><div class="q-who"><b>Paul McDonald</b>Managing Director, Closer Artists</div></div>
+    <div class="q-tile"><p>Openstage is revolutionizing the way artists and fans connect. I've always wanted to have more control over my music career and have a deeper connection with all of you. With Openstage, I can do just that. I'll be able to share new music, announce shows, and interact with you directly in a way that's more meaningful and personal.</p><div class="q-who"><b>Newton Faulkner</b>Artist</div></div>
+    <div class="q-tile"><p>We sold 5 times more tickets on our presale than our last tour using Openstage.</p><div class="q-who"><b>Roy Stride</b>Artist, Scouting for Girls</div></div>
+    <div class="q-tile"><p>Openstage has allowed many of our artists to take back control of their fan data and optimize it further. No matter how established an artist is, there's always room to grow your audience. We've demonstrated that first hand by capturing data around key opportunities and then rewarding and nurturing that fanbase so they're not just being marketed to. Without the fans, we have no business, so it's only right we focus on their value.</p><div class="q-who"><b>Sarah Gallagher</b>Managing Director, Modest! Management</div></div>
+    <div class="q-tile"><p>The best platform you didn't know you needed.</p><div class="q-who"><b>Matt Vines</b>CEO, Seven 7 Management</div></div>
+    <div class="q-tile"><p>Openstage provides us with an extremely powerful tool to connect our artists with their fans on levels and in ways that were not possible on one platform before now, whether new artists or established international acts. We are looking forward to rolling out the platform across our entire roster.</p><div class="q-who"><b>Alec McKinlay</b>Partner, Ignition Management</div></div>
+    <div class="q-tile"><p>Game changer for artists and managers!</p><div class="q-who"><b>Stephen 'Tav' Tavener</b>Founder, East City Management</div></div>
+    <div class="q-tile" aria-hidden="true"><p>Openstage is more than just another mailing list, it's a direct line from me to my fans. I wanted a way to give back to every single fan and make sure the most dedicated get rewarded. Openstage is how I can do that.</p><div class="q-who"><b>Yungblud</b>Artist</div></div>
+    <div class="q-tile" aria-hidden="true"><p>Openstage is the quiet storm currently hitting the music industry.</p><div class="q-who"><b>Paul McDonald</b>Managing Director, Closer Artists</div></div>
+    <div class="q-tile" aria-hidden="true"><p>Openstage is revolutionizing the way artists and fans connect. I've always wanted to have more control over my music career and have a deeper connection with all of you. With Openstage, I can do just that. I'll be able to share new music, announce shows, and interact with you directly in a way that's more meaningful and personal.</p><div class="q-who"><b>Newton Faulkner</b>Artist</div></div>
+    <div class="q-tile" aria-hidden="true"><p>We sold 5 times more tickets on our presale than our last tour using Openstage.</p><div class="q-who"><b>Roy Stride</b>Artist, Scouting for Girls</div></div>
+    <div class="q-tile" aria-hidden="true"><p>Openstage has allowed many of our artists to take back control of their fan data and optimize it further. No matter how established an artist is, there's always room to grow your audience. We've demonstrated that first hand by capturing data around key opportunities and then rewarding and nurturing that fanbase so they're not just being marketed to. Without the fans, we have no business, so it's only right we focus on their value.</p><div class="q-who"><b>Sarah Gallagher</b>Managing Director, Modest! Management</div></div>
+    <div class="q-tile" aria-hidden="true"><p>The best platform you didn't know you needed.</p><div class="q-who"><b>Matt Vines</b>CEO, Seven 7 Management</div></div>
+    <div class="q-tile" aria-hidden="true"><p>Openstage provides us with an extremely powerful tool to connect our artists with their fans on levels and in ways that were not possible on one platform before now, whether new artists or established international acts. We are looking forward to rolling out the platform across our entire roster.</p><div class="q-who"><b>Alec McKinlay</b>Partner, Ignition Management</div></div>
+    <div class="q-tile" aria-hidden="true"><p>Game changer for artists and managers!</p><div class="q-who"><b>Stephen 'Tav' Tavener</b>Founder, East City Management</div></div>
+  </div>
+</section>
+
 <!-- FAQ -->
-<section class="faq" style="background:var(--bg2)"><div class="wrap">
+<section class="faq" style="background:var(--bg)"><div class="wrap">
   <div><div class="hg left"><div class="eb">FAQ</div><h2>More questions?</h2><p class="lead">Here's what most artists ask first.</p></div></div>
   <div><details open><summary>What is Openstage?</summary><p>Openstage is the Fan Relationship Platform that helps artists grow by building stronger relationships with their fans. Purpose-built around the belief that growth is defined not just by how many fans an artist has, but how much they care, Openstage helps artists turn deeper fandom into Fan-Led Growth. Combining artist-owned fan experiences with the richest fan data in music, Openstage powers artist-fan relationships for over 30 million fans worldwide.</p></details><details><summary>How is Openstage different from direct-to-fan and CRM tools?</summary><p>Those tools are built for customers and optimize the moment: a send, a drop, an on-sale. Openstage is built for fans and optimizes the artist-fan relationship. You still get everything they do, but every interaction connects back to who your fans are and how much they care, so every moment builds fandom, not just reach.</p></details><details><summary>What tools can Openstage replace?</summary><p>Your website, link-in-bio, mailing list, SMS, pre-save, and membership tools. Most artists are paying for five or six things that Openstage does in one place, connected.</p></details><details><summary>How easy is it to switch?</summary><p>Openstage is built to be self-serve, with a full knowledge base, video tutorials and step-by-step guides to get you started. And our onboarding and support teams are with you from day one if you need them, covering migration, integrations and setup every step of the way.</p></details><details><summary>Do I need to be a data expert to use Openstage?</summary><p>No. Openstage makes the richest fan data in music easy to understand and act on. The dashboard gives you a clear view of your fanbase, and Openstage MCP connects that data to Claude, ChatGPT and Gemini so you can ask questions in plain English, find opportunities, shape strategy and know what to do next. No exports, no spreadsheets, no learning curve.</p></details><details><summary>Can I bring my existing fan data into Openstage?</summary><p>Yes. We support imports from most major platforms and our team will help you consolidate what you already have into one clean fanbase.</p></details><details><summary>Who owns my fan data?</summary><p>You do. Always. Openstage never sells or shares your fan data with third parties. What you build on Openstage stays yours.</p></details><details><summary>What does Openstage cost?</summary><p>Openstage comes in two plans: Build, for artists growing their fanbase, and Legendary, for artists operating at scale. See the pricing page for a full breakdown, or book a demo and we'll recommend the right plan for your needs.</p></details></div>
 </div></section>
