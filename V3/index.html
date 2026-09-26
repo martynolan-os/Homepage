@@ -361,7 +361,9 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .media .tag{width:80%;text-align:center}
 .fcard{flex:0 1 420px}
 /* v9.3 */
-.hero-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;width:100%;align-self:center}.hd{width:10px;height:10px;border-radius:50%;border:0;background:rgba(252,251,237,.2);cursor:pointer;padding:0;transition:background .3s}.hd.on{background:var(--yellow)}.hd:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.hero-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;width:100%;align-self:center}
+.hero .hero-dots{max-width:88%;margin-left:auto}
+@media(max-width:900px){.hero .hero-dots{max-width:none}}.hd{width:10px;height:10px;border-radius:50%;border:0;background:rgba(252,251,237,.2);cursor:pointer;padding:0;transition:background .3s}.hd.on{background:var(--yellow)}.hd:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
 
 .onecon{background:var(--bg)}
 .onecon-hg{width:auto;max-width:72ch}
@@ -444,7 +446,7 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .hero .fcard{flex:0 1 auto}
 @media(max-width:900px){.hero .wrap.hero-grid{grid-template-columns:1fr;gap:40px}.hero .pscreen{aspect-ratio:4/5;max-height:none}}
 .get .lead{text-align:center}
-.io-inline{font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;letter-spacing:-.02em;font-size:1.15em;font-weight:900}
+.io-inline{font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;letter-spacing:-.02em;font-size:1em;font-weight:900}
 h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 .cta h2{font-size:clamp(30px,2.9vw,46px)}
 .hg{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}
@@ -524,7 +526,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <!-- PROBLEM -->
 <section class="pov prob" style="padding-bottom:88px"><div class="wrap">
   <div class="center hg prob-hg"><div class="eb">Problem</div><h2>Growth is broken.</h2>
-  <p class="lead">The industry spent the past decade optimizing for attention, and artists<br>learned to grow from the outside in: chasing it, sending fans into platforms<br>they don't control, and hoping some of it turns into lasting fandom.</p></div>
+  <p class="lead">The industry spent the past decade optimizing for attention, and artists<br>learned to grow from the outside in: constantly chasing it, sending fans into<br>platforms they don't control, and hoping some of it turns into lasting fandom.</p></div>
   <div class="tiles">
     <div><h3>Expensive.</h3><p>You have to keep paying, posting and competing to reach people again.</p></div>
     <div><h3>Unreliable.</h3><p>What works today can disappear tomorrow because the platform controls the relationship.</p></div>
@@ -566,7 +568,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 
 <section class="payoff-band"><div class="wrap"><div class="hg">
   <h2>The goal isn't just more fans.<br><span class="y">It's more fans and deeper fandom.</span></h2>
-  <p>That's how you build a stronger, more valuable fanbase.</p>
+  <p>That's how you build a stronger, more valuable fanbase.<br>Stop chasing virality. Start building gravity.</p>
 </div><div class="btns" style="justify-content:center;margin-top:32px"><a class="btn btn-d" href="#" style="border:2px solid #9C8FFF">Read the Inside Out Playbook</a></div></div></section>
 
 <!-- CASE STUDIES -->
@@ -657,7 +659,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 
     <!-- RIGHT: FanHQ -->
     <div class="ts-side ts-right">
-      <div class="ts-label">After</div>
+      <div class="ts-label" style="margin-bottom:8px">After</div>
       <div class="ts-fanhq">
         <div class="fhq-profile">
           <div class="fhq-av">S</div>
