@@ -185,8 +185,8 @@ nav .right .btn{height:46px;padding:0 24px}
 
 /* get */
 .get .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
-.get .grid>div{background:var(--bg);padding:32px 26px;min-height:190px}
-.get .grid i{display:block;width:26px;height:26px;border-radius:7px;background:var(--yellow);margin-bottom:38px}
+.get .grid>div{background:var(--bg);padding:18px 20px;min-height:0}
+.get .grid i{display:block;font-style:normal;font-size:26px;line-height:1;margin-bottom:12px}
 .get .grid b{display:block;font-size:18px;font-weight:700;margin-bottom:8px}
 .get .grid p{color:var(--ink2);font-size:16px}
 .get .grid>div.hi{background:var(--yellow);color:#19142D}
@@ -450,9 +450,10 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 .prob .tiles p{color:var(--ink)}
 .sol-c{display:flex;flex-direction:column;align-items:center;text-align:center}
 .sol-c .ph.logo{width:min(640px,100%);margin-top:40px}
-.getrow{margin-top:64px}
-.getrow>h3{text-align:center;color:var(--ink);font-size:clamp(18px,1.8vw,22px);margin-bottom:24px}
-.get .getrow .grid{margin-top:0;grid-template-columns:repeat(var(--n),1fr)}
+.getrow{margin-top:40px}
+.getrow-hd{background:linear-gradient(90deg,#241C55,#2E2580);border:1px solid rgba(105,87,255,.4);border-radius:10px 10px 0 0;padding:13px 20px;text-align:center}
+.getrow-hd h3{margin:0;font-size:16px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#B8AEFF}
+.get .getrow .grid{margin-top:0;grid-template-columns:repeat(var(--n),1fr);border:1px solid rgba(105,87,255,.2);border-top:none;border-radius:0 0 10px 10px;overflow:hidden}
 @media(max-width:1000px){.get .getrow .grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.get .getrow .grid{grid-template-columns:1fr}}
 @media(max-width:900px){.dr{grid-template-columns:1fr;gap:10px}.dr-h h3{text-align:left}.cta h2{white-space:normal}.cta p{white-space:normal}.pf .cap{display:none}.logo-wrap{position:static;transform:none;align-items:flex-start}nav .wrap{gap:12px;padding:0 20px}.logo-tag{font-size:8px;letter-spacing:.03em}nav .right .btn{padding:0 16px;height:40px;font-size:12px}}
@@ -539,10 +540,9 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
   </div>
   <div class="step flip" data-step>
     <div class="hg left">
-      <div class="eyebrow">Fan data</div>
-      <h2>Know who cares,<br>and how much.</h2>
-      <p class="lead">Every stream, ticket, purchase and join adds to what you know about each fan. Openstage shows you who your most engaged fans are, what they respond to, and where to focus next.</p>
-      <ul class="step-lines"><li>Signals from streaming, social, ticketing and beyond.</li><li>The more fans do, the more you know.</li><li>The more you know, the better the experience.</li></ul>
+      <div class="eyebrow">2) Bring People Into It</div>
+      <h2>Know who your fans are<br>and how much they care.</h2>
+      <p class="lead">Every join, click, purchase and ticket connects to the same Fan Profile. Bring streaming, ticketing, merch, and messaging together, then see who cares and what’s working in Fanbase Analytics.</p>
     </div>
     <div class="media"><div class="frame on"><span class="tag">ANIMATION 1 OF 4</span><b>Bring fans in.</b><span>Landing Pages turn attention into fan relationships you can build on.</span></div><div class="frame"><span class="tag">ANIMATION 2 OF 4</span><b>Connect fan activity.</b><span>Streaming, tickets, merch, and more, connected around the fan.</span></div><div class="frame"><span class="tag">ANIMATION 3 OF 4</span><b>Know who is showing up.</b><span>Onboard and verify real fans.</span></div><div class="frame"><span class="tag">ANIMATION 4 OF 4</span><b>Build one Fan Profile of record.</b><span>One fan. One relationship.</span></div><div class="mdots"><button type="button" aria-label="Show Bring fans in" class="on"></button><button type="button" aria-label="Show Connect fan activity"></button><button type="button" aria-label="Show Know who is showing up"></button><button type="button" aria-label="Show Build one Fan Profile of record"></button></div></div>
   </div>
@@ -579,9 +579,9 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <section class="get" style="background:var(--bg2)"><div class="wrap">
   <div class="center hg get-hg"><div class="eb">What you get</div><h2>Everything you need to grow from the <span class="y io-inline">Inside Out</span><span class="y">.</span></h2>
   <p class="lead">One place to build and grow your fan ecosystem and turn more fan attention into relationships that get stronger and more valuable over time.</p></div>
-  <div class="getrow"><h3>1) Build Your World</h3><div class="grid" style="--n:4"><div><i></i><b>FanHQ</b><p>A home for your fans. Website, link-in-bio, Posts, membership and community in one place.</p></div><div><i></i><b>Membership and Fan Pass</b><p>Free and paid levels with one identity fans carry across your world.</p></div><div><i></i><b>Posts</b><p>Publish to your own feed and fan inboxes. Fans comment, react and share.</p></div><div><i></i><b>Music, merch and tours</b><p>Your music, tour dates and merch in one place your fans can find.</p></div></div></div>
-  <div class="getrow"><h3>2) Bring People Into It</h3><div class="grid" style="--n:4"><div><i></i><b>Fan Profiles</b><p>Every stream, click, purchase and join on one fan record.</p></div><div><i></i><b>Landing pages</b><p>Campaign pages and fan journeys that bring fans in from social.</p></div><div><i></i><b>Syncs and integrations</b><p>Streaming, ticketing, merch and social connected to the fan.</p></div><div><i></i><b>Fanbase analytics</b><p>See who cares, how much, and what's working.</p></div></div></div>
-  <div class="getrow"><h3>3) Put Your Fans First</h3><div class="grid" style="--n:4"><div><i></i><b>Campaigns</b><p>Email, SMS, push, and notifications from one place, with automations that run without you.</p></div><div><i></i><b>Ticket Unlocks</b><p>Invite-only on-sales that reward the fans who earned it.</p></div><div><i></i><b>Access and rewards</b><p>Gated content, early access, codes and drops for your top fans.</p></div><div><i></i><b>MCP</b><p>Bring Claude, ChatGPT or Gemini into your fanbase. Ask who cares most, what's working, and what to do next.</p></div></div></div>
+  <div class="getrow"><div class="getrow-hd"><h3>1) Build Your World</h3></div><div class="grid" style="--n:4"><div><i>🏠</i><b>FanHQ</b><p>A home for your fans. Website, link-in-bio, Posts, membership and community in one place.</p></div><div><i>🎟️</i><b>Membership and Fan Pass</b><p>Free and paid levels with one identity fans carry across your world.</p></div><div><i>📣</i><b>Posts</b><p>Publish to your own feed and fan inboxes. Fans comment, react and share.</p></div><div><i>🎸</i><b>Music, merch and tours</b><p>Your music, tour dates and merch in one place your fans can find.</p></div></div></div>
+  <div class="getrow"><div class="getrow-hd"><h3>2) Bring People Into It</h3></div><div class="grid" style="--n:4"><div><i>👤</i><b>Fan Profiles</b><p>Every stream, click, purchase and join on one fan record.</p></div><div><i>🚪</i><b>Landing pages</b><p>Campaign pages and fan journeys that bring fans in from social.</p></div><div><i>🔗</i><b>Syncs and integrations</b><p>Streaming, ticketing, merch and social connected to the fan.</p></div><div><i>📊</i><b>Fanbase analytics</b><p>See who cares, how much, and what's working.</p></div></div></div>
+  <div class="getrow"><div class="getrow-hd"><h3>3) Put Your Fans First</h3></div><div class="grid" style="--n:4"><div><i>✉️</i><b>Campaigns</b><p>Email, SMS, push, and notifications from one place, with automations that run without you.</p></div><div><i>🔓</i><b>Ticket Unlocks</b><p>Invite-only on-sales that reward the fans who earned it.</p></div><div><i>🎁</i><b>Access and rewards</b><p>Gated content, early access, codes and drops for your top fans.</p></div><div><i>🤖</i><b>MCP</b><p>Bring Claude, ChatGPT or Gemini into your fanbase. Ask who cares most, what's working, and what to do next.</p></div></div></div>
   <div class="btns"><a class="btn btn-o" href="#">See all features</a></div>
 </div></section>
 
