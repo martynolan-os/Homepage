@@ -364,6 +364,14 @@ footer .bar{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);di
 .hero-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;width:100%;align-self:center}
 .hero .hero-dots{max-width:88%;margin-left:auto}
 @media(max-width:900px){.hero .hero-dots{max-width:none}}.hd{width:10px;height:10px;border-radius:50%;border:0;background:rgba(252,251,237,.2);cursor:pointer;padding:0;transition:background .3s}.hd.on{background:var(--yellow)}.hd:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.hc-slide{display:none}
+.hc-slide.on{display:block}
+.hc-tag{display:inline-block;font-family:var(--display);font-variation-settings:"wdth" 125,"wght" 900;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);background:rgba(255,235,20,.12);border:1px solid rgba(255,235,20,.4);border-radius:20px;padding:4px 10px;margin-bottom:12px}
+.hc-dots{display:flex;gap:8px;margin-top:20px}
+.hcd{width:10px;height:10px;border-radius:50%;border:0;background:rgba(252,251,237,.2);cursor:pointer;padding:0;transition:background .3s}
+.hcd.on{background:var(--yellow)}
+.hcd:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.u-y{color:inherit;text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:4px;text-underline-offset:6px}
 
 .onecon{background:var(--bg)}
 .onecon-hg{width:auto;max-width:72ch}
@@ -505,8 +513,18 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <!-- HERO -->
 <section class="hero"><div class="wrap hero-grid">
   <div class="hg left hero-copy">
-    <h1>A better way to<br>grow your fanbase.<br>Build from the<br><span class="y">Inside Out</span><span class="dot">.</span></h1>
-    <p class="sub">Openstage helps artists build a world fans can join, bring fan activity together so you know your fans and how much they care, and create experiences that deepen fandom and drive lasting growth.</p>
+    <div class="hcar" id="hcar">
+      <div class="hc-slide on">
+        <div class="hc-tag">V1</div>
+        <h1><span class="y">Build a world</span><br>where followers<br>become your<br>biggest fans.</h1>
+      </div>
+      <div class="hc-slide">
+        <div class="hc-tag">V2</div>
+        <h1>A better way to<br>grow your fanbase.<br>Build from the<br><span class="y">Inside Out</span><span class="dot">.</span></h1>
+      </div>
+    </div>
+    <div class="hc-dots" aria-label="2 headline versions"><button class="hcd on" data-i="0" aria-label="Version 1"></button><button class="hcd" data-i="1" aria-label="Version 2"></button></div>
+    <p class="sub">Openstage helps artists build their own platform fans can join, bring fan activity together so you know your fans and how much they care, and create experiences that deepen fandom and drive lasting growth.</p>
     <div class="btns"><a class="btn btn-y" href="#">Book a demo</a><a class="btn btn-d" href="#" style="border:2px solid #9C8FFF">Learn more</a></div>
   </div>
   <div class="pstage" id="pstage">
@@ -852,6 +870,17 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
     hdots.forEach(function(d){d.addEventListener('click',function(){show(+d.dataset.pi);go();})});
     if(rm)st.classList.add('paused');
     go();
+  }
+  // hero copy carousel (headline versions)
+  var hc=document.getElementById('hcar');
+  if(hc){
+    var hcSlides=hc.querySelectorAll('.hc-slide'),hcDots=document.querySelectorAll('.hcd'),hi=0,ht;
+    function hcShow(k){hi=(k+hcSlides.length)%hcSlides.length;
+      hcSlides.forEach(function(x,j){x.classList.toggle('on',j===hi)});
+      hcDots.forEach(function(x,j){x.classList.toggle('on',j===hi)});}
+    function hcGo(){clearInterval(ht);if(!rm)ht=setInterval(function(){hcShow(hi+1)},5000);}
+    hcDots.forEach(function(d,j){d.addEventListener('click',function(){hcShow(j);hcGo();})});
+    hcGo();
   }
   // solution steps: tile list synced to animation frames
   document.querySelectorAll('[data-step]').forEach(function(s){
