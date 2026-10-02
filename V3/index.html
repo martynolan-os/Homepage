@@ -513,17 +513,7 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 <!-- HERO -->
 <section class="hero"><div class="wrap hero-grid">
   <div class="hg left hero-copy">
-    <div class="hcar" id="hcar">
-      <div class="hc-slide on">
-        <div class="hc-tag">V1</div>
-        <h1><span class="y">Build a world</span><br>where followers<br>become your<br>biggest fans.</h1>
-      </div>
-      <div class="hc-slide">
-        <div class="hc-tag">V2</div>
-        <h1>A better way to<br>grow your fanbase.<br>Build from the<br><span class="y">Inside Out</span><span class="dot">.</span></h1>
-      </div>
-    </div>
-    <div class="hc-dots" aria-label="2 headline versions"><button class="hcd on" data-i="0" aria-label="Version 1"></button><button class="hcd" data-i="1" aria-label="Version 2"></button></div>
+    <h1><span class="y">Build a world</span><br>where followers<br>become your<br>biggest fans.</h1>
     <p class="sub">Openstage helps artists build their own platform where fans can join and go deeper. It brings fan identity and activity together so you know who your fans are and how much they care, then gives you the tools to create experiences that deepen fandom and drive lasting growth.</p>
     <div class="btns"><a class="btn btn-y" href="#">Book a demo</a><a class="btn btn-d" href="#" style="border:2px solid #9C8FFF">Learn more</a></div>
   </div>
@@ -584,8 +574,8 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
 
 <!-- SOLUTION -->
 <section class="payoff-band"><div class="wrap"><div class="hg">
-  <h2>Most artist tools only help capture existing demand.<br><span class="y">Openstage helps you actually build it.</span></h2>
-  <p style="max-width:48ch;margin-left:auto;margin-right:auto">What artists have been missing is a platform to create fandom, deepen it over time, and turn it into growth.</p>
+  <h2>Fan engagement tools are built to capture attention and existing demand.<br><span class="y">Openstage helps you actually build it.</span></h2>
+  <p style="max-width:none;white-space:nowrap">Reach matters. It's how people discover you. But attention is not the end goal. What artists have<br>been missing is a platform to create fandom, deepen it over time, and turn it into growth.</p>
 </div></div></section>
 
 <section id="how" style="padding:84px 0 76px"><div class="wrap">
@@ -870,17 +860,6 @@ h2,.step h2,.payoff-band h2{font-size:clamp(24px,2.6vw,34px)}
     hdots.forEach(function(d){d.addEventListener('click',function(){show(+d.dataset.pi);go();})});
     if(rm)st.classList.add('paused');
     go();
-  }
-  // hero copy carousel (headline versions)
-  var hc=document.getElementById('hcar');
-  if(hc){
-    var hcSlides=hc.querySelectorAll('.hc-slide'),hcDots=document.querySelectorAll('.hcd'),hi=0,ht;
-    function hcShow(k){hi=(k+hcSlides.length)%hcSlides.length;
-      hcSlides.forEach(function(x,j){x.classList.toggle('on',j===hi)});
-      hcDots.forEach(function(x,j){x.classList.toggle('on',j===hi)});}
-    function hcGo(){clearInterval(ht);if(!rm)ht=setInterval(function(){hcShow(hi+1)},5000);}
-    hcDots.forEach(function(d,j){d.addEventListener('click',function(){hcShow(j);hcGo();})});
-    hcGo();
   }
   // solution steps: tile list synced to animation frames
   document.querySelectorAll('[data-step]').forEach(function(s){
